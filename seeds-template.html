@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1a0f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Seed Stash · Genetica Regis</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .seed-stash { padding: 1rem 0; }
+    .seed-category { margin-bottom: 2.5rem; }
+    .seed-category > h2 { 
+      color: var(--color-blue);
+      border-bottom: 2px solid var(--entry-border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+    .seed-subcategory { margin-bottom: 2rem; margin-left: 0.5rem; }
+    .seed-subcategory > h3 { 
+      color: var(--color-yellow);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .seed-breeder { 
+      margin-bottom: 1.5rem; 
+      padding: 1rem;
+      background: var(--box-bg);
+      border-radius: 8px;
+      border-left: 3px solid var(--color-blue);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .seed-breeder h5 {
+      color: var(--color-red);
+      font-size: 1rem;
+      margin: 0 0 0.75rem 0;
+      font-weight: 600;
+    }
+    .seed-breeder ul {
+      margin: 0;
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+    .seed-breeder li {
+      padding: 0.25rem 0;
+      color: var(--content-text);
+      position: relative;
+    }
+    .seed-breeder li::before {
+      content: '🌱';
+      position: absolute;
+      left: -1.5rem;
+      font-size: 0.8em;
+    }
+    .seed-count {
+      color: var(--color-yellow);
+      font-weight: 500;
+    }
+    .total-summary {
+      background: var(--box-bg);
+      border: 2px solid var(--color-blue);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .total-summary h4 {
+      color: var(--color-blue);
+      margin: 0 0 1rem 0;
+      font-size: 1.2rem;
+    }
+    .total-summary ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+    }
+    .total-summary li {
+      padding: 0.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--entry-border);
+    }
+    .grand-total {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-yellow);
+      padding-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-layer"></div>
+  
+  <nav class="taskbar">
+    <div class="logo">
+      <a href="index.html">
+        <span class="prompt-arrow">🌿</span><span class="prompt-cmd">Genetica</span> <span class="prompt-path">Regis</span>
+      </a>
+    </div>
+    <div class="menu-container">
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="menu-dropdown">
+        <ul class="menu">
+          <!--MENU-->
+        </ul>
+        <div class="theme-controls">
+          <div class="theme-row">
+            <span class="theme-label">Theme</span>
+            <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle dark/light mode">🌙</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-wrapper">
+    <main>
+      <div class="seed-stash">
+        <h1>🫘 Seed Stash</h1>
+        <p>Medical cannabis genetics collection for breeding projects. These seeds will be used to develop new therapeutic strains through careful selection and crossing.</p>
+
+        <!-- FEMALE SEEDS -->
+        <div class="seed-category">
+          <h2>♀️ Female Seeds</h2>
+          
+          <!-- AUTOMATIC -->
+          <div class="seed-subcategory">
+            <h3>⚡ Automatic Seeds</h3>
+            
+            <div class="seed-breeder">
+              <h5>Bulkseedbank</h5>
+              <ul>
+                <li>Devil's Kiss — <span class="seed-count">2 seeds</span></li>
+                <li>AK — <span class="seed-count">2 seeds</span></li>
+                <li>Amnesia Haze — <span class="seed-count">2 seeds</span></li>
+                <li>Coffee Rocket — <span class="seed-count">4 seeds</span></li>
+                <li>Bigger Bud — <span class="seed-count">4 seeds</span></li>
+                <li>Psychedelic — <span class="seed-count">4 seeds</span></li>
+                <li>Chronical — <span class="seed-count">3 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>V-Buds (krumme-gurken.com)</h5>
+              <ul>
+                <li>Alderaan Cookies — <span class="seed-count">1 seed</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Gnomes Garden</h5>
+              <ul>
+                <li>Jealousy — <span class="seed-count">6 seeds</span></li>
+                <li>Cherry Alien — <span class="seed-count">3 seeds</span></li>
+                <li>Sour Wedding Cheesecake — <span class="seed-count">6 seeds</span></li>
+                <li>Fast/Auto Purple Sour Freeze — <span class="seed-count">5 seeds</span></li>
+                <li>Sour OG Runtz — <span class="seed-count">3 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Monkey Genetics</h5>
+              <ul>
+                <li>Biscotti — <span class="seed-count">1 seed</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Jackie Chun Seeds</h5>
+              <ul>
+                <li>Fastbuds Cherry — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PHOTOPERIOD -->
+          <div class="seed-subcategory">
+            <h3>☀️ Photoperiod Seeds</h3>
+            
+            <div class="seed-breeder">
+              <h5>RQS</h5>
+              <ul>
+                <li>F1 Hybrid — <span class="seed-count">2 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Gnomes Garden</h5>
+              <ul>
+                <li>Fast Purple Passion F1 — <span class="seed-count">5 seeds</span></li>
+                <li>Fast Black Domina — <span class="seed-count">4 seeds</span></li>
+                <li>Bubble Gum — <span class="seed-count">5 seeds</span></li>
+                <li>Cindy 99 Fast Version — <span class="seed-count">5 seeds</span></li>
+                <li>Bruce Banner x White Russian — <span class="seed-count">5 seeds</span></li>
+                <li>C99 x Blueberry — <span class="seed-count">2 seeds</span></li>
+                <li>Gorilla Glue — <span class="seed-count">5 seeds</span></li>
+                <li>Grape Killer 99 — <span class="seed-count">3 seeds</span></li>
+                <li>Jack Herer — <span class="seed-count">4 seeds</span></li>
+                <li>NYC Diesel — <span class="seed-count">5 seeds</span></li>
+                <li>Original Lemon Pie — <span class="seed-count">3 seeds</span></li>
+                <li>Super Lemon Haze — <span class="seed-count">2 seeds</span></li>
+                <li>Super Skunk — <span class="seed-count">7 seeds</span></li>
+                <li>Somango — <span class="seed-count">1 seed</span></li>
+                <li>Serious 6 Fast Version — <span class="seed-count">4 seeds</span></li>
+                <li>Wedding Cake x Zkittlez — <span class="seed-count">4 seeds</span></li>
+                <li>WW x AK 47 — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Paradise Seeds</h5>
+              <ul>
+                <li>Space Cookies — <span class="seed-count">1 seed</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Seed Supplier</h5>
+              <ul>
+                <li>Maui Waui — <span class="seed-count">2 seeds</span></li>
+                <li>Grape Gas — <span class="seed-count">2 seeds</span></li>
+                <li>Blueberry — <span class="seed-count">3 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Medical Seeds</h5>
+              <ul>
+                <li>Channel+ — <span class="seed-count">2 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>OASeeds Genetics</h5>
+              <ul>
+                <li>Shiskaberry — <span class="seed-count">10 seeds</span></li>
+                <li>Amnesia Haze — <span class="seed-count">10 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Speed Seeds</h5>
+              <ul>
+                <li>Northern Light x Northern Light — <span class="seed-count">3 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Cannasam</h5>
+              <ul>
+                <li>Special Lemon Haze — <span class="seed-count">3 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Female Seeds</h5>
+              <ul>
+                <li>Grape Amnesia — <span class="seed-count">1 seed</span></li>
+                <li>Lemon Kush — <span class="seed-count">4 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Lux Seeds</h5>
+              <ul>
+                <li>Zesty Frosty Pie — <span class="seed-count">6 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Oldschool Genetics</h5>
+              <ul>
+                <li>Login Cabin x Spritzer — <span class="seed-count">6 seeds</span></li>
+                <li>Gush Mints x Spritzer — <span class="seed-count">6 seeds</span></li>
+                <li>Blue Grape Fuel — <span class="seed-count">6 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>World of Seeds</h5>
+              <ul>
+                <li>Colombian Gold — <span class="seed-count">6 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Jackie Chun Seeds</h5>
+              <ul>
+                <li>SSH x PM Dojo Cut R1 — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Monkey Genetics</h5>
+              <ul>
+                <li>Zupreme Lime — <span class="seed-count">2 seeds</span></li>
+                <li>G13 Dawg Haze V2 — <span class="seed-count">2 seeds</span></li>
+                <li>G13 x Dawg Haze — <span class="seed-count">10 seeds</span></li>
+                <li>Monkey Haze — <span class="seed-count">10 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Greenhouse Seeds</h5>
+              <ul>
+                <li>Holy Snow — <span class="seed-count">5 seeds</span></li>
+                <li>Trainwreck — <span class="seed-count">5 seeds</span></li>
+                <li>Velvet Moon — <span class="seed-count">5 seeds</span></li>
+                <li>Super Silver Haze — <span class="seed-count">5 seeds</span></li>
+                <li>Franco's Fullgas — <span class="seed-count">5 seeds</span></li>
+                <li>Flower Bomb Kush — <span class="seed-count">20 seeds</span></li>
+                <li>Persian Pie — <span class="seed-count">5 seeds</span></li>
+                <li>NL5 Haze Mist — <span class="seed-count">5 seeds</span></li>
+                <li>Lemon Orange — <span class="seed-count">5 seeds</span></li>
+                <li>Himalaya Gold — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>TGA Subcool</h5>
+              <ul>
+                <li>Chernobyl — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- REGULAR SEEDS -->
+        <div class="seed-category">
+          <h2>⚥ Regular Seeds</h2>
+          
+          <div class="seed-subcategory">
+            <h3>☀️ Photoperiod Seeds</h3>
+            
+            <div class="seed-breeder">
+              <h5>Monkey Genetics</h5>
+              <ul>
+                <li>G13 x Amnesia OG — <span class="seed-count">20 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Philosopher Seeds</h5>
+              <ul>
+                <li>Agent Orange — <span class="seed-count">10 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Gnomes Garden</h5>
+              <ul>
+                <li>(ES x UEL) x BOW — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Khalifa Genetics</h5>
+              <ul>
+                <li>Chellakutti — <span class="seed-count">3 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>OASeeds Genetics</h5>
+              <ul>
+                <li>Super Silver Haze — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>K.C. Brains</h5>
+              <ul>
+                <li>Mango — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Dutch Passion</h5>
+              <ul>
+                <li>White Widow x The Ultimate — <span class="seed-count">10 seeds</span></li>
+              </ul>
+            </div>
+
+            <div class="seed-breeder">
+              <h5>Jackie Chun Seeds</h5>
+              <ul>
+                <li>Freaky Duckz — <span class="seed-count">5 seeds</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOTAL SUMMARY -->
+        <div class="total-summary">
+          <h4>📊 Total Seed Count</h4>
+          <ul>
+            <li><span>Female Automatic Seeds</span><span class="seed-count">47 seeds</span></li>
+            <li><span>Female Photoperiod Seeds</span><span class="seed-count">195 seeds</span></li>
+            <li><span>Regular Photoperiod Seeds</span><span class="seed-count">58 seeds</span></li>
+          </ul>
+          <div class="grand-total">
+            <span>Grand Total</span>
+            <span>300 seeds</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="service-dock">
+    <div class="dock-content">
+      <span class="dock-label">Strains:</span>
+      <a href="#strains" class="dock-item" title="Our Genetics">🧬 Genetics</a>
+      <a href="#breeding" class="dock-item" title="Breeding Projects">🌱 Breeding</a>
+      <a href="seeds.html" class="dock-item dock-item-active" title="Seed Stock">🫘 Seeds</a>
+      <a href="#gallery" class="dock-item" title="Photo Gallery">📸 Gallery</a>
+      <a href="#contact" class="dock-item" title="Contact Us">✉️ Contact</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <!--FOOTERLINKS-->
+      </div>
+      <div class="footer-info">
+        <span>© 2026 Genetica Regis · <a href="mailto:info@geneticaregis.com">Contact</a> · Cannabis Breeding Project</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>
